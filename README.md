@@ -1,4 +1,4 @@
-# SQL Analytics Assessment
+# DataAnalytics-Assessment
 
 This repository contains solutions to four SQL-based analytical problems related to customer behavior, transactions, and account activity.
 
