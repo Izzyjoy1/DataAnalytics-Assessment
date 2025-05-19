@@ -69,3 +69,12 @@ I counted their total transactions and computed the average transaction value.
 CLV was then estimated as:  
 ```sql
 (average monthly transactions) × (average transaction value) × 12
+
+The formula was implemented using conditional logic to prevent division by zero for users with zero tenure.  
+The output was sorted by estimated CLV in descending order to highlight high-value customers.
+
+### ⚠️ Challenges  
+Users with no recorded tenure (e.g., newly joined users) could cause division errors in the CLV formula.  
+To prevent this, I wrapped the calculation in a CASE statement that returned 0 when tenure was NULL or zero.  
+Another difficulty was ensuring the CLV metric reflected true user value and not just high transaction volume.  
+I addressed this by factoring in both transaction count and average transaction value, resulting in a more balanced and meaningful CLV estimate.
