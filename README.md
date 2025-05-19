@@ -64,10 +64,10 @@ This dual-condition logic was essential to include all relevant inactive plans.
 ## Assessment_Q4: Estimation of Customer Lifetime Value (CLV)
 
 ### 🧠 Approach  
-I calculated the user’s tenure in months using `TIMESTAMPDIFF()` between their `date_joined` and the current date.  
+I calculated the user’s tenure in months using TIMESTAMPDIFF between their date_joined and the current date.  
 I counted their total transactions and computed the average transaction value.  
-CLV was then estimated as:  
-```sql
+CLV was then estimated using the formula:
+
 (average monthly transactions) × (average transaction value) × 12
 
 The formula was implemented using conditional logic to prevent division by zero for users with zero tenure.  
